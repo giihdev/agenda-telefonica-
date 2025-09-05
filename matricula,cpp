@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+class AED{
+    private:
+    string nome;
+    int matricula;
+    string curso;
+    
+    public:
+    void setNome(string n){
+        nome= n;
+    }
+    void setMatricula(int m){
+        matricula= m;
+    }
+    void setCurso(string p){
+        curso= p;
+    }
+    
+    string getNome(){
+        return nome;
+    }
+    
+    int getMatricula(){
+        return matricula;
+    }
+    string getCurso(){
+        return curso;
+    }
+    
+    AED (string n, int m, string p){
+        nome= n;
+        matricula= m;
+        curso= p;
+    }
+    
+    void Cadastrar(){
+        cout << "nome:"<< nome<< ", matricula:"<< matricula << ", curso:"<< curso;
+    }
+};
+
+int main()
+{
+    AED aluno1("Gisele", 555555, "engenharia de redes");
+    aluno1.Cadastrar();
+    return 0;
+}
